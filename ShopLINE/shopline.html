@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: auto;
+        }
+
+        .main {
+
+            width: 100%;
+            margin: auto;
+
+
+
+        }
+
+
+        .title h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            font-size: 28px;
+
+        }
+
+        .title p {
+            display: flex;
+            /* 水平置中 */
+            justify-content: center;
+            /* 垂直置中 */
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .introduce {
+            display: flex;
+            width: 100%;
+            margin-top: 50px;
+
+
+        }
+
+        .introduce .introduce-word {
+            width: 50%;
+            padding: 5px;
+
+
+            /* position: relative;
+            left: 300px;
+            top: 150px; */
+
+
+        }
+
+        .introduce .introduce-img {
+            width: 50%;
+
+            /* position: relative;
+            right: 10px; */
+
+
+        }
+
+        .introduce-word a {
+
+
+            /* position: relative;
+            left: 30px;
+            ; */
+
+        }
+
+        .introduce-word a::after {
+            content: '>>';
+            display: inline;
+        }
+
+        .alllist {
+            display: flex;
+            margin-left: -30px;
+        }
+
+        .list1 .list2 {
+            flex: 1;
+            /* 使两个列表平分容器宽度 */
+            list-style-type: none;
+            /* 移除默认列表样式 */
+            padding: 5px;
+            /* 移除默认内边距 */
+        }
+
+        /* 可以为列表项添加样式以区分两个列表 */
+        .list1 li {
+            text-decoration: none;
+        }
+
+        .list2 li {}
+
+        a {
+            color: blue;
+        }
+
+        .payment {
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+            flex-direction: row-reverse;
+        }
+
+        .payment .payment-word {
+            width: 50%;
+            padding: 5px;
+            margin-left: 150px;
+
+        }
+
+        .payment .payment-img {
+
+            width: 50%;
+            /* position: relative;
+            left: 250px; */
+
+        }
+
+        .payment-word a {
+            /* position: relative;
+            right: 30px; */
+
+
+        }
+
+        .payment-word a::after {
+            content: '>>';
+            display: inline;
+        }
+
+        .marketing {
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .marketing .marketing-word {
+            width: 50%;
+            padding: 5px;
+            /* position: relative;
+            left: 300px; */
+
+
+        }
+
+        .marketing .marketing-img {
+            width: 50%;
+            /* position: relative;
+            right: 10px; */
+
+
+        }
+
+        .marketing-word a {
+
+            /* 
+            position: relative;
+            left: 30px;
+            ; */
+
+        }
+
+
+        .marketing-word a::after {
+            content: '>>';
+            display: inline;
+        }
+
+        .socialmedia {
+            width: 100%;
+            display: flex;
+
+            margin-top: 50px;
+            flex-direction: row-reverse;
+        }
+
+        .socialmedia .socialmedia-word {
+            width: 50%;
+            padding: 5px;
+            margin-left: 50px;
+        }
+
+        .socialmedia .socialmedia-img {
+
+            width: 50%;
+            /* position: relative;
+            left: 300px; */
+
+        }
+
+        .socialmedia-word a {
+            /* position: relative;
+            right: 30px; */
+
+
+        }
+
+        .socialmedia a::after {
+            content: '>>';
+            display: inline;
+        }
+
+        .omo {
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            gap: 5%;
+            margin-top: 50px;
+        }
+
+        .omo .omo-word {
+            width: 50%;
+            padding: 5px;
+            /* position: relative;
+            left: 300px; */
+
+
+        }
+
+        .omo .omo-img {
+            width: 50%;
+
+            /* position: relative;
+            right: 10px; */
+
+
+        }
+
+        .omo-word a {
+
+            /* 
+            position: relative;
+            left: 30px;
+            ; */
+
+        }
+
+        .omo-word a::after {
+            content: '>>';
+            display: inline;
+        }
+
+        .footer {
+            width: 100%;
+
+        }
+
+
+        .footer h2 {
+            font-size: 32px;
+            /* position: relative;
+            right: 50px; */
+
+
+        }
+
+        .footer .first-area {
+            width: 100%;
+            padding: 100px 0;
+            /* margin-top: auto; */
+            display: flex;
+
+
+
+
+
+        }
+
+        .footer .item {
+            width: auto;
+            text-align: center;
+            margin-top: auto;
+
+        }
+
+        .footer .second-area {
+            width: 100%;
+            padding: 5px;
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="title">
+                <h2><strong>單一平台就能助你<br>在全通路輕鬆開店創業</strong></h2>
+                <p>從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！</p>
+
+            </div>
+        </div>
+
+        <div class="introduce">
+            <div class="introduce-word">
+                <h2><strong>免寫程式、多款版型<br>輕鬆打造全能電商網站</strong></h2>
+                <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業<br>設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣<br>簡單。</p>
+                <div class="alllist">
+
+                    <ul>
+                        <li>豐富版型主題與字型搭配</li>
+                        <li>SEO 搜尋引擎優化</li>
+                        <li>RWD 響應式網頁設計</li>
+
+                    </ul>
+
+
+
+                    <ul>
+                        <li>一頁商店</li>
+                        <li>獨有網址 ＆ SSL 安全憑證</li>
+                        <li>開放 HTMLCSS 編輯</li>
+                    </ul>
+
+
+
+                </div>
+                <a href="">開店密技</a>
+            </div>
+
+            <div class="introduce-img">
+                <img src=".//550x.webp" alt="">
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="payment">
+                <div class="payment-word">
+                    <h2><strong>支持海內外電商<br>
+                            金流、物流一次搞定</strong></h2>
+                    <p>支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及
+                        <br>送貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！
+                    </p>
+                    <div class="alllist">
+                        <div class="list1">
+                            <ul>
+                                <li>線上／線下信用卡刷卡</li>
+                                <li>S第三方金流／行動支付整合</li>
+                                <li>超商代碼／條碼繳費</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="list2">
+                            <ul>
+                                <li>多溫層宅配並指定運費</li>
+                                <li>超商／宅配貨到付款</li>
+                                <li>發票開立與串接</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <a href="">了解更多金物流</a>
+                </div>
+
+                <div class="payment-img">
+                    <img src=".//550x (1).webp" alt="">
+                </div>
+            </div>
+
+
+            <div class="main">
+
+                <div class="marketing">
+                    <div class="marketing-word">
+                        <h2><strong>刺激下單，創造回購<br>
+                                行銷導流、促購模組任你玩</strong></h2>
+                        <p>多元優惠活動、會員集客機制、網紅分潤等多種優惠促銷，將電商行銷<br>
+                            玩法一網打盡；加上廣告追蹤助你有效優化行銷活動，刺激顧客下單<br>
+                            \、吸引鐵粉回購！</p>
+                        <div class="alllist">
+                            <div class="list1">
+                                <ul>
+                                    <li>推薦活動與分潤
+                                    </li>
+                                    <li>A+B 優惠活動</li>
+                                    <li>會員分級／點數／購物金</li>
+
+                                </ul>
+                            </div>
+
+                            <div class="list2">
+                                <ul>
+                                    <li>買Ｘ享Ｙ優惠</li>
+                                    <li>會員推薦獎賞</li>
+                                    <li>FB／Google／LINE 廣告追蹤</li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <a href="">看更多優惠模組</a>
+                    </div>
+
+                    <div class="marketing-img">
+                        <img src=".//550x.webp" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+
+                <div class="socialmedia">
+                    <div class="socialmedia-word">
+                        <h2><strong>「社群+電商」輕鬆開賣<br>
+                                打造一致的社群購物體驗
+                            </strong></h2>
+                        <p>善用社群與顧客頻繁互動，讓你透過社群也能輕鬆開賣！從直播 +1 接<br>
+                            單、聊天機器人到各管道的訊息整合，我們都為你準備好了，不放過每<br>
+                            個銷售環節，打造全方位的社群購物體驗！
+                        </p>
+                        <div class="alllist">
+                            <div class="list1">
+                                <ul>
+                                    <li>社群直播購物系統</li>
+                                    <li>FB & IG 貼文 +1</li>
+                                    <li>自訂聊天機器人腳本</li>
+
+                                </ul>
+                            </div>
+
+                            <div class="list2">
+                                <ul>
+                                    <li>FB／IG／LINE 直播 +1</li>
+                                    <li>FB／IG／LINE 對話式購物</li>
+                                    <li>訊息整合中心</li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <a href="">看更多社群購物功能</a>
+                    </div>
+
+                    <div class="socialmedia-img">
+                        <img src=".//500x(3).webp" alt="">
+                    </div>
+                </div>
+
+                <div class="main">
+
+                    <div class="omo">
+                        <div class="omo-word">
+                            <h2><strong>OMO 全通路無縫整併<br>
+                                    輕鬆管理網店、門市以及其他通路</strong></h2>
+                            <p>不論是網店拓展門市，還是門市想發展網路生意，從商品、庫存、訂單<br>
+                                到會員等各項虛實店舖的資料都能完善整併，輕鬆實現全通路會員經營<br>
+                                到多店營運。</p>
+                            <div class="alllist">
+                                <div class="list1">
+                                    <ul>
+                                        <li>門市 POS 系統</li>
+                                        <li>線上線下會員／商品／庫存整合</li>
+                                        <li>門市快速集客工具</li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="list2">
+                                    <ul>
+                                        <li>線上買門市取</li>
+                                        <li>進銷庫存／調撥／多店管理
+                                        </li>
+                                        <li>Smart OMO 會員導購工具
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="">了解更多全通路整合</a>
+                        </div>
+
+                        <div class="omo-img">
+                            <img src=".//500x(3).webp" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="title">
+                        <h2>更多功能與服務</h2>
+                    </div>
+
+                    <div class="first-area">
+                        <div class="item">
+                            <img src=".//1.png" alt="">
+                            <h2>強大庫存訂單</h2>
+                            <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                        </div>
+                        <div class="item">
+                            <img src=".//2.png" alt="">
+                            <h2>即時化商店業績分析</h2>
+                            <p>圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。</p>
+                        </div>
+                        <div class="item">
+                            <img src=".//3.png" alt="">
+                            <h2>多國語系、幣值切換</h2>
+                            <p>想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。</p>
+                        </div>
+                    </div>
+                    <div class="second-area">
+                        <div class="item">
+                            <img src=".//4.png" alt="">
+                            <h2>強大庫存訂單</h2>
+                            <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                        </div>
+                        <div class="item">
+                            <img src=".//5.png" alt="">
+                            <h2>即時化商店業績分析</h2>
+                            <p>圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。</p>
+                        </div>
+                        <div class="item">
+                            <img src=".//6.png" alt="">
+                            <h2>多國語系、幣值切換</h2>
+                            <p>想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

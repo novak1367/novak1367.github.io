@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .susscc {
+            background-color: green;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="guess">請輸入一個1~100的數字: </label>
+    <input type="text" class="guessArea" />
+    <input type="button" value="送出" class="guessSubmit" />
+    <input type="button" value="看答案" class="getanswer" />
+
+    <p type="text" class="guesses"></p>
+    <p type="text" class="loworhi"></p>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log(randomNumber);
+        const guessSubmit = document.querySelector(".guessSubmit");
+        const guessArea = document.querySelector(".guessArea");
+        const guesses = document.querySelector(".guesses");//猜的數
+        const loworhi = document.querySelector(".loworhi");//高或低
+
+        const getanswer = document.querySelector(".answer");
+        let low = 1;
+        let high = 100;
+
+
+
+        function checkGuess() {
+            const userGuessNumber = Number(guessArea.value);
+
+            if (userGuessNumber === randomNumber) {
+                guesses.textContent = "Congratulations! You got it right!";
+                // guesses.style.backgroundColor = "green";
+                guesses.setAttribute("style", "background-color: red;color:#fff");
+                // guesses.classList.add("susscc")
+
+            }
+            function getanswer() {
+                let randomNumber = Math.floor(Math.random() * 100) + 1;
+                console.log(randomNumber);
+            }
+
+            if (userGuessNumber !== randomNumber) {
+
+                if (userGuessNumber < randomNumber) {
+                    low = userGuessNumber;
+                } else if (userGuessNumber > randomNumber) {
+                    high = userGuessNumber;
+                }
+                loworhi.textContent = `請輸入${low}到${high}`;
+            }
+        }//25 50 10
+        guessSubmit.addEventListener("click", checkGuess);
+        answer.addEventListener("click", getanswer);
+    </script>
+</body>
+
+</html>

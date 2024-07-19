@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .header .item {
+            width: 50%;
+
+
+        }
+
+        .item:first-child {
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            top: 120px;
+            left: 30px;
+
+
+
+        }
+
+        .item:last-child {
+            font-size: 120px;
+            position: relative;
+            right: 150px;
+            top: 50px;
+
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+
+
+        }
+
+        .container .pic {
+            width: 60%;
+
+        }
+
+        .container .pic img {
+            max-width: 100%;
+        }
+
+        .container .txt {
+            margin: 150px;
+            margin-right: auto;
+            writing-mode: vertical-lr;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container .txt img {
+            margin-bottom: 50px;
+            margin: auto;
+
+        }
+
+        .container-mid {
+            width: 100%;
+            display: flex;
+
+            position: relative;
+
+            margin-bottom: 150px;
+
+        }
+
+
+        .container-mid .pic {
+            width: 50%;
+            position: relative;
+            top: -100px;
+            left: 300px;
+        }
+
+        .container-mid .pic img {
+            width: 60%;
+            border-radius: 5%;
+        }
+
+        .container-mid .txt {
+            width: 30%;
+            position: relative;
+            top: 50px;
+
+        }
+
+        .container-mid h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .container-mid p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .container-mid a {
+            text-decoration: none;
+
+        }
+
+        .container-span {
+            font-size: 60px;
+            text-align: left;
+            position: relative;
+
+        }
+
+        .container-span .span-a p {
+            font-size: 80px;
+            position: relative;
+            left: 300px;
+        }
+
+        .container-span .span-b p {
+            font-size: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card-list {
+            border: 2px solid red;
+            width: 100%;
+            height: 700px;
+            padding: 20px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .card-list .card {
+
+            width: 30%;
+            margin: 10px 10px;
+            position: relative;
+            left: 100px;
+
+
+        }
+
+
+
+
+
+        .card h3 {
+            font-size: 24px;
+            color: #fff;
+            position: relative;
+            top: -450px;
+            left: 50px;
+            text-align: left;
+        }
+
+        .card a {
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 40%;
+            position: relative;
+            top: -400px;
+            left: 50px;
+            padding: 10px;
+            text-decoration: none;
+
+        }
+
+        .card-list .card a:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+        .card-list .card p {
+
+            color: #FFF;
+            position: relative;
+            top: -250px;
+        }
+
+        .card-list .card p {
+            display: none;
+
+        }
+
+        .card-list .card:hover p {
+            display: block;
+
+
+        }
+
+        .card-list .card span {
+
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            top: -200px;
+            left: 50px;
+        }
+
+
+        .card-list .card img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            border-radius: 5%;
+            background-color: black;
+        }
+
+        .span {
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .span .line {
+            position: relative;
+            width: 2200px;
+            height: 5px;
+            background-color: black;
+            margin: auto;
+            position: relative;
+            left: 200px;
+        }
+
+        .span .txt {
+            font-size: 24px;
+            position: relative;
+            left: 200px;
+            text-decoration: none;
+            padding: 10px 0;
+        }
+
+        .card-list-main {
+            width: 100%;
+        }
+
+        .card-list-main .header {
+            display: flex;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .card-list-main .header h3 {
+            font-size: 24px;
+            position: relative;
+            left: 200px;
+        }
+
+        .card-list-main .header a {
+            position: relative;
+            font-size: 24px;
+            left: 1800px;
+            text-decoration: none;
+            color: orange;
+        }
+
+        .card-list-main .body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            ;
+
+        }
+
+        .card-list-main .body .big-card {
+            width: 50%;
+
+            position: relative;
+            top: 30px;
+            left: 200px;
+        }
+
+        .body .big-card img {
+            width: 100%;
+            border-radius: 3%;
+        }
+
+
+
+        .big-card .txt {
+            width: 100%;
+            display: flex;
+            padding: 20px;
+            text-align: left;
+            font-size: 20px;
+            position: relative;
+
+        }
+
+        .body .small-card {
+
+            padding: 0 15px;
+            width: 100%;
+            left: 200px;
+            position: relative;
+
+            top: 10px;
+
+        }
+
+        .body .small-card img {
+            width: 100%;
+            border-radius: 0.7em;
+        }
+
+        .small-card .top {
+
+            display: flex;
+            margin-bottom: 40px;
+            padding-left: 20px;
+            position: relative;
+            top: 20px;
+
+
+        }
+
+        .small-card .bottom {
+            display: flex;
+            padding-left: 20px;
+            position: relative;
+            top: 50px;
+
+
+        }
+
+        .small-card h4 {
+            margin-top: 10px;
+        }
+
+        .small-card .card {
+            margin: 0 10px;
+        }
+
+        @media screen and (min-width:992px) {
+
+            .header {
+                width: 100%;
+                display: flex;
+                position: relative;
+            }
+
+            .header .item {
+                width: 50%;
+
+
+            }
+
+            .item:first-child {
+                text-align: center;
+                font-size: 30px;
+                position: relative;
+                top: 120px;
+                left: 30px;
+
+
+
+            }
+
+            .item:last-child {
+                font-size: 120px;
+                position: relative;
+                right: 150px;
+                top: 50px;
+
+            }
+
+            .container {
+                width: 100%;
+                display: flex;
+
+
+            }
+
+            .container .pic {
+                width: 60%;
+
+            }
+
+            .container .pic img {
+                max-width: 100%;
+            }
+
+            .container .txt {
+                margin: 150px;
+                margin-right: auto;
+                writing-mode: vertical-lr;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .container .txt img {
+                margin-bottom: 50px;
+                margin: auto;
+
+            }
+
+            .container-mid {
+                width: 100%;
+                display: flex;
+
+                position: relative;
+
+                margin-bottom: 150px;
+
+            }
+
+
+            .container-mid .pic {
+                width: 50%;
+                position: relative;
+                top: -100px;
+                left: 300px;
+            }
+
+            .container-mid .pic img {
+                width: 60%;
+                border-radius: 5%;
+            }
+
+            .container-mid .txt {
+                width: 30%;
+                position: relative;
+                top: 50px;
+
+            }
+
+            .container-mid h3 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .container-mid p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .container-mid a {
+                text-decoration: none;
+
+            }
+
+            .container-span {
+                font-size: 60px;
+                text-align: left;
+                position: relative;
+
+            }
+
+            .container-span .span-a p {
+                font-size: 80px;
+                position: relative;
+                left: 300px;
+            }
+
+            .container-span .span-b p {
+                font-size: 15px;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .card-list {
+                border: 2px solid red;
+                width: 100%;
+                height: 700px;
+                padding: 20px;
+                margin: 0 10px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+            }
+
+            .card-list .card {
+
+                width: 30%;
+                margin: 10px 10px;
+                position: relative;
+                left: 100px;
+
+
+            }
+
+
+
+
+
+            .card h3 {
+                font-size: 24px;
+                color: #fff;
+                position: relative;
+                top: -450px;
+                left: 50px;
+                text-align: left;
+            }
+
+            .card a {
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 40%;
+                position: relative;
+                top: -400px;
+                left: 50px;
+                padding: 10px;
+                text-decoration: none;
+
+            }
+
+            .card-list .card a:hover {
+                background-color: #fff;
+                color: black;
+            }
+
+            .card-list .card p {
+
+                color: #FFF;
+                position: relative;
+                top: -250px;
+            }
+
+            .card-list .card p {
+                display: none;
+
+            }
+
+            .card-list .card:hover p {
+                display: block;
+
+
+            }
+
+            .card-list .card span {
+
+                color: #fff;
+                font-size: 14px;
+                position: relative;
+                top: -200px;
+                left: 50px;
+            }
+
+
+            .card-list .card img {
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+                border-radius: 5%;
+                background-color: black;
+            }
+
+            .span {
+                margin-top: 50px;
+                position: relative;
+            }
+
+            .span .line {
+                position: relative;
+                width: 2200px;
+                height: 5px;
+                background-color: black;
+                margin: auto;
+                position: relative;
+                left: 200px;
+            }
+
+            .span .txt {
+                font-size: 24px;
+                position: relative;
+                left: 200px;
+                text-decoration: none;
+                padding: 10px 0;
+            }
+
+            .card-list-main {
+                width: 100%;
+            }
+
+            .card-list-main .header {
+                display: flex;
+                position: relative;
+                padding: 10px 0;
+            }
+
+            .card-list-main .header h3 {
+                font-size: 24px;
+                position: relative;
+                left: 200px;
+            }
+
+            .card-list-main .header a {
+                position: relative;
+                font-size: 24px;
+                left: 1800px;
+                text-decoration: none;
+                color: orange;
+            }
+
+            .card-list-main .body {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                ;
+
+            }
+
+            .card-list-main .body .big-card {
+                width: 50%;
+
+                position: relative;
+                top: 30px;
+                left: 200px;
+            }
+
+            .body .big-card img {
+                width: 100%;
+                border-radius: 3%;
+            }
+
+
+
+            .big-card .txt {
+                width: 100%;
+                display: flex;
+                padding: 20px;
+                text-align: left;
+                font-size: 20px;
+                position: relative;
+
+            }
+
+            .body .small-card {
+
+                padding: 0 15px;
+                width: 100%;
+                left: 200px;
+                position: relative;
+
+                top: 10px;
+
+            }
+
+            .body .small-card img {
+                width: 100%;
+                border-radius: 0.7em;
+            }
+
+            .small-card .top {
+
+                display: flex;
+                margin-bottom: 40px;
+                padding-left: 20px;
+                position: relative;
+                top: 20px;
+
+
+            }
+
+            .small-card .bottom {
+                display: flex;
+                padding-left: 20px;
+                position: relative;
+                top: 50px;
+
+
+            }
+
+            .small-card h4 {
+                margin-top: 10px;
+            }
+
+            .small-card .card {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="item">
+            <p>ハワイを想うことは、<br>
+                ハワイの未来を創ること。</p>
+        </div>
+        <div class="item">
+            <p> <strong>Re-Imagine<br>Hawai‘i</strong>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="pic">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main.jpg" alt="">
+        </div>
+        <div class="txt">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/scroll_more.svg"
+                alt="">
+            <p>旅行者のみなさんだからできることがあります。<br>
+                美しい楽園ハワイは、永遠ではありません。<br>
+                山から海まで、ハワイに生きる美しい自然や文化に<br>
+                「マラマ = 思いやりの心」を持って接すること。<br>
+                レスポンシブル・ツーリズムは、そんな思いやりの心を<br>
+                旅の中で実践していく、新しい観光のカタチです。<br>
+                ハワイが何十年後も、何百年後も、素晴らしい楽園であるよう
+            </p>
+        </div>
+    </div>
+    <div class="container-mid">
+        <div class="pic">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main_turtle.jpg"
+                alt="">
+        </div>
+        <div class="txt">
+            <h3>美しいハワイを<br>
+                未来へとつなぐために<br>
+                わたしたちができること</h3>
+            <p>ハワイは世界の絶滅危惧種の宝庫と呼ばれるほど、貴重な生物がたくさん生息し
+                ています。ウミガメ、イルカ、クジラ、サンゴ礁。これらを守るためにも、
+                知ってもらいたいことやルールがあります。これからは旅行者にも、
+                ハワイの島々の自然や文化を守り、現地住民が大切にする場所を敬い、
+                美しいハワイを未来へつなげていく行動が求められます。
+                「レスポンシブル・ツーリズム」一緒にはじめませんか。</p>
+            <a href="">マラマハワイとは➤</a>
+        </div>
+
+    </div>
+    <div class="container-span">
+        <div class="span-a">
+            <p><strong>What We Can Do to<br>
+                    Keep Hawai‘ i Beautiful <br>
+                    for the Future.</strong></p>
+        </div>
+        <div class="span-b">
+            <p>ABOUT MĀLAMA HAWAI‘I</p>
+        </div>
+    </div>
+    <!-- <div class="card-list">
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main.jpg" alt="">
+            <h3>責任ある旅行“レスポンシブル・ <br>ツーリズム”について</h3>
+            <a href="">詳しく見る ➤</a>
+
+            <p>WHAT IS “RESPONSIBLE TOURISM”</p>
+
+        </div>
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main.jpg" alt="">
+            <h3>ハワイ独自の取り組み“アロ <br>ハプラスチャレンジ”について</h3>
+            <a href="">詳しく見る ➤</a>
+            <p>WHAT IS “RESPONSIBLE TOURISM”</p>
+        </div>
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main.jpg" alt="">
+            <h3>ハワイ州観光局からのメッセー <br>ジ</h3>
+            <a href="">詳しく見る ➤</a>
+            <p>WHAT IS “RESPONSIBLE TOURISM”</p>
+        </div>
+    </div> -->
+
+    <div class="card-list">
+
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main_turtle.jpg"
+                alt="">
+            </img>
+            <h3>責任ある旅行“レスポンシブル・ <br>ツーリズム”について</h3>
+            <a href="">詳しく見る ➤</a>
+            <p>観光客もツーリズムを構成する要素であると捉え、観光客が意識や行動に責任を持つことで、より良い観光地形成を行っていこうという考え方です。</p>
+            <span>WHAT IS “RESPONSIBLE TOURISM”</span>
+        </div>
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main_turtle.jpg"
+                alt="">
+            </img>
+            <h3>責任ある旅行“レスポンシブル・ <br>ツーリズム”について</h3>
+            <a href="">詳しく見る ➤</a>
+            <p>SDG’sを基準にハワイ州が独自のゴールを設定した特別プログラムです。官民一体となり経済、社会、環境の側面からを持続可能な社会を目指します。</p>
+
+            <span>WHAT IS “RESPONSIBLE TOURISM”</span>
+        </div>
+        <div class="card">
+            <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main_turtle.jpg"
+                alt="">
+            </img>
+            <h3>責任ある旅行“レスポンシブル・ <br>ツーリズム”について</h3>
+            <a href="">詳しく見る ➤</a>
+            <p>歴史的にも深い関係を持つ日本とハワイが、これからも共に支え合い、高め合う良い関係が継続できるようハワイ州観光局もサポートしていきます。</p>
+
+            <span>WHAT IS “RESPONSIBLE TOURISM”</span>
+        </div>
+    </div>
+    <div class="span">
+        <div class="line">
+
+        </div>
+        <div class="txt">LATEST</div>
+    </div>
+    <div class="span">
+        <div class="line"></div>
+    </div>
+</body>
+<div class="card-list-main">
+    <div class="header">
+        <h3>旅行者にできること What Travelers Can Do</h3>
+        <a href="">すべて見る ➤</a>
+    </div>
+    <div class="body">
+        <div class="big-card">
+            <div class="pic">
+                <img src="https://www.allhawaii.jp/malamahawaii/wp-content/themes/malamahawaii/img/home/main_turtle.jpg"
+                    alt=""><a href=""></a></img>
+            </div>
+            <div class="txt">
+                <h3>【4月22日はアースデイ】ハワイでの環境にやさしいイベントを紹介！</h3>
+                <p>毎年4月22日はアースデイ(Earth Day)！地球や環境のことを考え、一人一人が何ができるかを考えたり行動を起こすために生まれた1日。1970年にユネスコに</p>
+            </div>
+        </div>
+        <div class="small-card">
+            <div class="top">
+                <div class="card">
+                    <img src="	https://www.allhawaii.jp/malamahawaii/wp-content/uploads/2021/04/Prince-Kuhio.jpg"
+                        alt="">
+                    </img>
+                    <h4>プリンス・クヒオ・デイ・セレブレーション（Prince Kuhio Day Celebration）</h4>
+                </div>
+                <div class="card">
+                    <img src="	https://www.allhawaii.jp/malamahawaii/wp-content/uploads/2021/04/Prince-Kuhio.jpg"
+                        alt="">
+                    </img>
+                    <h4>プリンス・クヒオ・デイ・セレブレーション（Prince Kuhio Day Celebration）</h4>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="card">
+                    <img src="	https://www.allhawaii.jp/malamahawaii/wp-content/uploads/2021/04/Prince-Kuhio.jpg"
+                        alt="">
+                    </img>
+                    <h4>プリンス・クヒオ・デイ・セレブレーション（Prince Kuhio Day Celebration）</h4>
+                </div>
+                <div class="card">
+                    <img src="	https://www.allhawaii.jp/malamahawaii/wp-content/uploads/2021/04/Prince-Kuhio.jpg"
+                        alt="">
+                    </img>
+                    <h4>プリンス・クヒオ・デイ・セレブレーション（Prince Kuhio Day Celebration）</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</html>
