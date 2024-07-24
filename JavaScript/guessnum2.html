@@ -22,11 +22,20 @@
     </div>
 
     <script>
-        // function checkGuess() {
-        //     const userGuessNumber = Number(guessArea.value);
-        let randomAnswer = Math.floor(Math.random() * 9001) + 999;
+        //生成亂數
+        function generateFourDigitRandomNumber() {
+            randomNumber = Math.floor(1000 + Math.random() * 9000);
+        }
+        //   const randomNumber = generateFourDigitRandomNumber();
+        //     console.log(randomNumber);
+        //畫面
+        const cofirmbtn = document.querySelector("#cofirm-btn");
         const answerbtn = document.querySelector("#answer-btn");
-        const guessnumber = document.querySelector("#guessnumber");
+        const resetbtn = document.querySelector("#reset-btn");
+        //讀取亂數
+        resetbtn.addEventListener("click", function () {
+            console.log(randomNumber);
+        });
         //randomAnswer[0]==guessnumber[0]
         //A B count 對才加
         //跑4位數 set資料結構 array
